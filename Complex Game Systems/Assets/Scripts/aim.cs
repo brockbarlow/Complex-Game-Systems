@@ -19,7 +19,7 @@ public class aim : MonoBehaviour {
 
             if (hit != null && hit.collider != null)
             {//Will hold the object that is being hit and have it add to score or whatever is needed.
-               //hit.collider.gameObject.GetComponent<Box>.enabled = false;
+               hit.collider.gameObject.GetComponent<Box>().enabled = false;
             }
               
             //Could possibly be used for health detection.
