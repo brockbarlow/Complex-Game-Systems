@@ -19,6 +19,7 @@ public class Seak : MonoBehaviour {
 
     void Start()
     {
+        // Find any targets and add them to our list of targets
         for (int i = 0; i < FindObjectsOfType<Box>().Length; i++)
         {
             m_Piviots.Add(FindObjectsOfType<Box>()[i]);
@@ -27,6 +28,7 @@ public class Seak : MonoBehaviour {
 
     void Update()
     {
+        // For every target we do the math for boid
         foreach (Box box in m_Piviots)
         {
             m_MovementFactor = Mathf.Clamp(50f - Vector3.Distance(box.transform.position, transform.position), 0f, 50f);
