@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 //count down timer without using delta time.
 public class TimeCounter : MonoBehaviour
 {
-    private float countdownValue = 99; //private float variable. set to 99 seconds.
+    private float countdownValue = 15; //private float variable. set to 99 seconds.
     private float countdown; //private float variable. will be used in coroutine.
 
     [SerializeField]

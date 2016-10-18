@@ -11,11 +11,11 @@ public class crosshair : MonoBehaviour {
 
     void Awake()
     {
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     void OnGUI()
     {
-        GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, crosshairSizeX, crosshairSizeY), crosshairTexture);
+        GUI.DrawTexture(new Rect(Event.current.mousePosition.x - 25, Event.current.mousePosition.y - 25, crosshairSizeX, crosshairSizeY), crosshairTexture);
     }
 }
