@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
+using System;
 
 public class aim : MonoBehaviour {
 
@@ -34,3 +36,12 @@ public class aim : MonoBehaviour {
         Debug.Log("Gotteem");
     }
 }
+
+
+//public class Aim : MonoBehaviour, IPointerClickHandler
+//{
+//    public void OnPointerClick(PointerEventData eventData)
+//    {
+//        throw new NotImplementedException();
+//    }
+//}
