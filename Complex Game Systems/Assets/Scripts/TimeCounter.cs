@@ -9,10 +9,10 @@ using UnityEngine.SceneManagement;
 //count down timer without using delta time.
 public class TimeCounter : MonoBehaviour
 {
-    private float countdownValue = 15; //private float variable. set to 99 seconds.
+    private float countdownValue = 25; //private float variable. 
     private float countdown; //private float variable. will be used in coroutine.
-    private Box target;
-    bool stopTime;
+    private Box target; //target object
+    bool stopTime; //used to stop the timer
 
     [SerializeField]
     private GameObject counterText; //used to display the text to the canvas.
@@ -22,8 +22,8 @@ public class TimeCounter : MonoBehaviour
         countdown = countdownValue; //countdown variable now has the same data as countdownValue.
         StartCoroutine(StartCountdown()); //Initiate coroutine.
         counterText.SetActive(true); //will ensure that timer can be seen when game starts.
-        target = FindObjectOfType<Box>();
-        stopTime = false;
+        target = FindObjectOfType<Box>(); //find the target
+        stopTime = false; //set this to false or timer will never start
     }
 
     public IEnumerator StartCountdown() //where the magic happens.
@@ -39,7 +39,7 @@ public class TimeCounter : MonoBehaviour
     {
         counterText.GetComponent<Text>().text = "Time left: " + countdown; //displays the text for the timer in the canvas.
 
-        if (target.win == true)
+        if (target.win == true) //if the player wins the game, the timer will stop counting down.
         {
             stopTime = true;
         }
