@@ -11,7 +11,7 @@ public class crosshair : MonoBehaviour {
 
     void Awake()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     void OnGUI()
