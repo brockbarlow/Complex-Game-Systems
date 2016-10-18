@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 65f805c4970cf6c45aa74c1b43107822
-timeCreated: 1476811876
+timeCreated: 1476817926
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - crosshairTexture: {instanceID: 0}
+  - crosshairTexture: {fileID: 2800000, guid: cf517e5e788ce594d8bd11c8e67dfc1f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
