@@ -1,23 +1,32 @@
-﻿using UnityEngine;
+﻿//This script is used for the crosshair
+
+using UnityEngine;
 using System.Collections;
 
 public class crosshair : MonoBehaviour {
 
     public Texture2D crosshairTexture;
-    public float crosshairScale = 1;
+    private Rect crosshairRect;
+    public bool isCrosshairVisible = true;
+    public int crosshairSizeX = 32;
+    public int crosshairSizeY = 32;
+    public static bool lockCursor;
+
+    void Awake()
+    {
+        Cursor.visible = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("SpaceBar"))
+        {
+            isCrosshairVisible = !
+        }
+    }
 
     void OnGUI()
     {
-        if (Time.timeScale != 0)
-        {
-            if (crosshairTexture != null)
-            {
-                GUI.DrawTexture(new Rect((Screen.width - crosshairTexture.width * crosshairScale) / 2, (Screen.height - crosshairTexture.height * crosshairScale) / 2, crosshairTexture.width * crosshairScale, crosshairTexture.height * crosshairScale), crosshairTexture);
-            }
-            else
-            {
-                Debug.Log("No crosshair texture set in the Inspector");
-            }
-        }
+
     }
 }
