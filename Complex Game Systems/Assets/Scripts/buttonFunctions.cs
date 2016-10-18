@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿//This script holds the various button functions for the game.
+
+//required usings.
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class buttonFunctions : MonoBehaviour {
 
-	public void restart()
+	public void restart() //
     {
         SceneManager.LoadScene("BrockScene");
     }

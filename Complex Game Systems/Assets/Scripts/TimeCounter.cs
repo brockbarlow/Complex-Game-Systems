@@ -4,11 +4,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //count down timer without using delta time.
 public class TimeCounter : MonoBehaviour
 {
-    private float countdownValue = 99; //private float variable. set to 99 seconds.
+    private float countdownValue = 10; //private float variable. set to 99 seconds.
     private float countdown; //private float variable. will be used in coroutine.
 
     [SerializeField]
@@ -33,5 +34,10 @@ public class TimeCounter : MonoBehaviour
     void Update()
     {
         counterText.GetComponent<Text>().text = "Time left: " + countdown; //displays the text for the timer in the canvas.
+
+        if (countdown == 0) //when the count down timer reaches zero, the game over scene will load.
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
