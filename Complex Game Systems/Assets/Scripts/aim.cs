@@ -15,7 +15,7 @@ public class aim : MonoBehaviour {
         transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, +10));
         if (Input.GetMouseButtonDown(0) == true)
         {//Plays Audio when the mouse button down.
-            //GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play();
 
             if (hit != null && hit.collider != null)
             {//Will hold the object that is being hit and have it add to score or whatever is needed.
