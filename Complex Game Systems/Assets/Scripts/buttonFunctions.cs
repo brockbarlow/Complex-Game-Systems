@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class buttonFunctions : MonoBehaviour {
 
-	public void restart() //this function will "reload" the game scene.
+	public void restart() //this function will reload the game scene.
     {
         SceneManager.LoadScene("BrockScene");
     }
@@ -14,5 +14,15 @@ public class buttonFunctions : MonoBehaviour {
     public void start() //this function will load the game scene.
     {
         SceneManager.LoadScene("BrockScene");
+    }
+
+    public void howTo() //this function will load the how to play scene.
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+
+    public void back() //this function will load the title scene.
+    {
+        SceneManager.LoadScene("Title");
     }
 }
