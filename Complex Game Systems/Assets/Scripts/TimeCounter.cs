@@ -11,6 +11,8 @@ public class TimeCounter : MonoBehaviour
 {
     private float countdownValue = 15; //private float variable. set to 99 seconds.
     private float countdown; //private float variable. will be used in coroutine.
+    private Box target;
+    bool stopTime;
 
     [SerializeField]
     private GameObject counterText; //used to display the text to the canvas.
@@ -20,11 +22,13 @@ public class TimeCounter : MonoBehaviour
         countdown = countdownValue; //countdown variable now has the same data as countdownValue.
         StartCoroutine(StartCountdown()); //Initiate coroutine.
         counterText.SetActive(true); //will ensure that timer can be seen when game starts.
+        target = FindObjectOfType<Box>();
+        stopTime = false;
     }
 
     public IEnumerator StartCountdown() //where the magic happens.
     {
-        while (countdown >= 1) //as long as countdown is greater than zero, do this.
+        while (countdown >= 1 && stopTime == false) //as long as countdown is greater than zero, do this.
         {
             yield return new WaitForSeconds(1.0f); //wait for one second, then continue.
             countdown--; //decrement variable value.
@@ -34,6 +38,11 @@ public class TimeCounter : MonoBehaviour
     void Update()
     {
         counterText.GetComponent<Text>().text = "Time left: " + countdown; //displays the text for the timer in the canvas.
+
+        if (target.win == true)
+        {
+            stopTime = true;
+        }
 
         if (countdown == 0) //when the count down timer reaches zero, the game over scene will load.
         {
