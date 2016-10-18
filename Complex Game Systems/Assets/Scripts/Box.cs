@@ -37,7 +37,7 @@ public class Box : MonoBehaviour {
             GameObject Win = (GameObject)Instantiate(Resources.Load("Win_A", typeof(GameObject)));
             Win.transform.SetParent(FindObjectOfType<Canvas>().transform);
             check = false;
-            Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
 }
