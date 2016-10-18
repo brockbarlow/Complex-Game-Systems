@@ -6,8 +6,8 @@ public class crosshair : MonoBehaviour {
 
     public Texture2D crosshairTexture;
     private Rect crosshairRect;
-    private int crosshairSizeX = 64;
-    private int crosshairSizeY = 64;
+    private int crosshairSizeX = 48;
+    private int crosshairSizeY = 48;
 
     void Awake()
     {
