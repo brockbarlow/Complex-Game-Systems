@@ -15,7 +15,7 @@ public class Multiply : MonoBehaviour {
     void Start ()
     {
         // I make a random number of spheres
-        numbSpheres = Mathf.Round(Random.Range(10.0f, 100.0f));
+        numbSpheres = Mathf.Round(Random.Range(10.0f, 500.0f));
         // and spawn them in random locations around the target
         for (int i = 0; i < numbSpheres; i++)
         {
