@@ -18,13 +18,9 @@ public class Box : MonoBehaviour {
         check = true;
     }
 
-    void OnTriggerEnter(Collider col)
+    public void Involcable()
     {
-        // If it collides with anything but a shield it takes damage
-        if (col.gameObject.GetComponent<Shield>() == null)
-        {
             health -= 10;
-        }
     }
 
     void Update()
