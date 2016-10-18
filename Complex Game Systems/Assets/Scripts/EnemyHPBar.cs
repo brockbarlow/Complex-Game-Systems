@@ -2,9 +2,6 @@
 
 //required usings.
 using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class EnemyHPBar : MonoBehaviour {
 
