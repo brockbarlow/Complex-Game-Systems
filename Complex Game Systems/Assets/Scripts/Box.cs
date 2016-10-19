@@ -41,8 +41,10 @@ public class Box : MonoBehaviour {
         {
             win = true;
             // I make a game winning animation
-            GameObject Win = (GameObject)Instantiate(Resources.Load("Win_A", typeof(GameObject)));
-            Win.transform.SetParent(FindObjectOfType<Canvas>().transform);
+            Canvas Can = FindObjectOfType<Canvas>();
+            Image Win = (Image)Instantiate(Resources.Load("Win_A", typeof(Image)));
+            Win.rectTransform.SetParent(FindObjectOfType<Canvas>().transform);
+            Win.rectTransform.rect.Set(Win.rectTransform.rect.x, Win.rectTransform.rect.y, Can.pixelRect.width, Can.pixelRect.height);
             check = false;
             // Destroy(gameObject);
         }
