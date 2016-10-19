@@ -39,14 +39,23 @@ public class Box : MonoBehaviour {
         // If the target loses all it's health you win
         if (health <= 0 && check == true)
         {
-            win = true;
-            // I make a game winning animation
-            Canvas Can = FindObjectOfType<Canvas>();
-            Image Win = (Image)Instantiate(Resources.Load("Win_A", typeof(Image)));
-            Win.rectTransform.SetParent(FindObjectOfType<Canvas>().transform);
-            Win.rectTransform.rect.Set(Win.rectTransform.rect.x, Win.rectTransform.rect.y, Can.pixelRect.width, Can.pixelRect.height);
-            check = false;
-            Destroy(gameObject);
+            SpawnThing();
         }
+    }
+
+    void SpawnThing()
+    {
+        win = true;
+        // I make a game winning animation
+        Canvas Can = FindObjectOfType<Canvas>();
+        Image Win = (Image)Instantiate(Resources.Load("Win_A", typeof(Image)));
+        Win.rectTransform.SetParent(FindObjectOfType<Canvas>().transform);
+        Win.rectTransform.anchorMin = new Vector2(0, 0);
+        Win.rectTransform.anchorMax = new Vector2(1, 1);
+        Win.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+        Win.rectTransform.offsetMin = new Vector2(0, 0);
+        Win.rectTransform.offsetMax = new Vector2(0, 0);
+        check = false;
+        Destroy(gameObject);
     }
 }
