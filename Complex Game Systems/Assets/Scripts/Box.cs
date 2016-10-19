@@ -11,6 +11,10 @@ public class Box : MonoBehaviour {
     // Checks if you have won
     public bool win;
 
+    // Song that plays when you win
+    [SerializeField]
+    AudioClip winSong;
+
     void Start()
     {
         // Starting the target off with 100 health
@@ -55,6 +59,8 @@ public class Box : MonoBehaviour {
         Win.rectTransform.pivot = new Vector2(0.5f, 0.5f);
         Win.rectTransform.offsetMin = new Vector2(0, 0);
         Win.rectTransform.offsetMax = new Vector2(0, 0);
+        FindObjectOfType<Camera>().GetComponent<AudioSource>().clip = winSong;
+        FindObjectOfType<Camera>().GetComponent<AudioSource>().Play();
         check = false;
         Destroy(gameObject);
     }
