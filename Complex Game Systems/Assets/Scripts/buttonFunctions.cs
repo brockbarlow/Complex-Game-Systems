@@ -25,4 +25,9 @@ public class buttonFunctions : MonoBehaviour {
     {
         SceneManager.LoadScene("Title");
     }
+
+    public void credits() //this function will load the credits scene.
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
