@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 65f805c4970cf6c45aa74c1b43107822
+timeCreated: 1476885933
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - crosshairTexture: {fileID: 2800000, guid: babf9437de8da5b45bbde1adb6c5ee90, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
