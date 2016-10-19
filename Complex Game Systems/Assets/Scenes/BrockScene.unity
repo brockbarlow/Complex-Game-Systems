@@ -352,7 +352,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21ab79bd3e676814fb915bccd8fd3255, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5c6688e7826012347ba8add22be23387, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -585,7 +585,7 @@ Prefab:
         type: 2}
       propertyPath: winSong
       value: 
-      objectReference: {fileID: 8300000, guid: 6fa96fafaabc6d04aba2e85e3a3c0764, type: 3}
+      objectReference: {fileID: 8300000, guid: 48ca46b2a8dc80c4b8a7911367c4ae69, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac2cbacfdc1564344880db965e6cf236, type: 2}
   m_IsPrefabParent: 0
