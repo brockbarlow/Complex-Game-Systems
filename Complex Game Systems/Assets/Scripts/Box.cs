@@ -46,7 +46,7 @@ public class Box : MonoBehaviour {
             Win.rectTransform.SetParent(FindObjectOfType<Canvas>().transform);
             Win.rectTransform.rect.Set(Win.rectTransform.rect.x, Win.rectTransform.rect.y, Can.pixelRect.width, Can.pixelRect.height);
             check = false;
-            // Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
